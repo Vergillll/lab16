@@ -1,0 +1,20 @@
+N = int(input())
+A = []
+rep = []
+for i in range(0, N):
+    A.append(int(input()))
+k = 0
+i = 0
+d = 0
+p = 0
+while i < len(A):
+    p = A[i]
+    k = A.count(p)
+    if k == 2:
+        d = A.index(A[i])
+        del A[d]
+        d = A.index(A[i])
+        del A[d]
+    i += 1
+print(len(A))
+print(A)
