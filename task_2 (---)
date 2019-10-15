@@ -3,23 +3,24 @@ A = []
 k = 0
 p = 0
 u = 0
+i = 0
+j = 0
 for i in range(0, N):
     A.append(int(input()))
 
-for i in range(0, int(len(A)) - 1):
-    k = 0
-    for j in range(i + 1, int(len(A))):
-        if A[i] == A[j]:
+i = 0
+
+while i < len(A):
+    while j < len(A):
+        if A[i] == A[j] and i != j:
             p = i
             u = j
-    for d in range(0, int(len(A))):
-        if p != d and u != d and A[p] == A[d] and A[u] == A[d]:
-            k += 1
-            print(str(k) + "====" + str(d) + " " + str(A[d]))
-            print(p, u, d, A[p])
-            print("__________________")
-            
-        
+            print(p, u)
+        j += 1
+        print(j)
+    i += 1  
+    print(i)
+
 print("____________________________")
 print(len(A))
 print(A)
