@@ -1,0 +1,12 @@
+N = int(input())
+A = []
+d = 0
+for i in range(0, N):
+    A.append(int(input()))
+
+while d < len(A):
+    if A[d] > 0:
+        A.insert(d, 0)
+        d += 1
+    d += 1
+print(A)
