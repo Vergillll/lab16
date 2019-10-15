@@ -1,8 +1,11 @@
 N = int(input())
 A = []
-k = 0
+rep = []
 p = 0
 u = 0
+
+
+k = 0
 i = 0
 j = 0
 for i in range(0, N):
@@ -11,16 +14,16 @@ for i in range(0, N):
 i = 0
 
 while i < len(A):
+    j = 0
     while j < len(A):
-        if A[i] == A[j] and i != j:
+        if A[i] == A[j] and i != j and j > i:
             p = i
             u = j
             print(p, u)
         j += 1
-        print(j)
-    i += 1  
-    print(i)
+    i += 1
 
 print("____________________________")
 print(len(A))
 print(A)
+        #while k < len(rep):
