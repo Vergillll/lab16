@@ -7,6 +7,7 @@ max = A[0]
 maxn= 0
 min = A[0]
 minn = 0
+
 for i in range(0, int(len(A))):
     if A[i] > max:
         max = A[i]
@@ -14,7 +15,9 @@ for i in range(0, int(len(A))):
     if A[i] < min:
         min = A[i]
         minn = i
+        
 print(minn, maxn)
+
 if minn < maxn:
     A.insert(minn, 0)
     A.insert(maxn+2, 0)
